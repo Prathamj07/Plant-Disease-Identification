@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url("hero_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    height: 13%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.layout {
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+.layout::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    background: inherit;
+    filter: blur(10px); 
+}
+
+.layout h2 {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #6fb581;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+button:hover {
+    background-color: #2f5731;
+}
+
+.layout a {
+    color: #62ae75;
+    text-decoration: none;
+}
+
+.layout a:hover {
+    text-decoration: underline;
+    color: #2f5731;
+}
+
+.hidden {
+    display: none;
+}
+footer a{
+    text-decoration: none;
+    
+}
+footer a:hover{
+    text-decoration: underline;
+    color: blue;
+}

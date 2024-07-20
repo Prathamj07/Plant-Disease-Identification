@@ -1,0 +1,9 @@
+Flask==2.0.3
+Flask-SQLAlchemy==2.5.1
+Werkzeug==2.0.3
+bcrypt==3.2.0
+opencv-python==4.5.5.64
+numpy==1.21.2
+keras==2.7.0
+h5py==3.1.0
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Identifier - Login/Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Leaf Inspector</h1>
+    </nav>
+
+    <div class="layout" id="login-container">
+        <h2>Login to Leaf Inspector</h2>
+        {% if error and error_type == 'login' %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
+    </div>
+
+    <div class="layout hidden" id="register-container">
+        <h2>Register</h2>
+        {% if error and error_type == 'register' %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form action="/register" method="POST">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
